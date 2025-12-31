@@ -11,7 +11,7 @@ Insatiable appetite for learning and sharing new technology.
 
 ## Technical Skills
 
-Java, Gradle, SQL, Bash, Linux, Javascript/Typescript, Docker, Spring, Micronaut, Groovy, Ruby, React, Svelte, AWS CDK, OpenRewrite
+Java, Gradle, SQL, Bash, Linux, Javascript/Typescript, Docker, Spring, Micronaut, Groovy, Ruby, React, Svelte, AWS CDK, OpenRewrite, XML/XSLT
 
 ## Experience
 
@@ -29,16 +29,18 @@ Full-stack engineer for a popular travel website. Many contributions over a long
 
 * Modernization
   * Refactoring legacy codebase without disrupting the site.
-  * Migrating back-office jobs to AWS.  
+  * Migrating back-office jobs to AWS.
+  * Cross-team planning for AWS migration of microservices.
 * Teaching
-  * Led book groups. ("Effective Java")
+  * Led book groups ("Effective Java"), adding company context.
   * Gave presentations on external technology and in-house tools.
   * Many code reviews, always giving explanations or examples.
 * Productivity
-  * Gradle builds, wrote plugins to support coding standards.
-  * Built test tools to speed up developer iteration.
+  * Ensure Gradle builds include every step a project needs: avoids manual steps that could be forgotten.
+  * Built Gradle plugins to enforce company code style and standards: improving consistency between developers and reducing trivial code review comments.
+  * Built test tools that sped up development of team's main service by several minutes per iteration.
 * Feature development
-  * Hotel meta search.
+  * Hotel meta search: highly concurrent backend service getting over a billion rates per day from partners.
   * Internal website for account managers.
 * Oversight
   * Cross-team design review: identify risks, success metrics.
@@ -56,11 +58,11 @@ Backend service engineer for a games website.
 
 September 1997 - February 2006
 
-Software engineer for a wide variety of clients for an IT consultancy.
+Full-stack software engineer for a wide variety of clients for an IT consultancy.
 
 * Intranet websites for financial institutions, local government and others.  
 * CRM integration for online real estate.  
-* Main skills used: Java, SQL, XML
+* Main skills used: Java, SQL, XML/XSLT
 
 ## Education
 
