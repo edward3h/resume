@@ -45,7 +45,7 @@ Full-stack engineer for a popular travel website. Many contributions over a long
 * Oversight
   * Cross-team design review: identify risks, success metrics.
 
-### Virtue Fusion Ltd, London, UK — *Java Developer*
+### Virtue Fusion Ltd, London, UK - *Java Developer*
 
 February 2006 - March 2008
 
@@ -54,7 +54,7 @@ Backend service engineer for a games website.
 * Led the transition from supporting a single currency, to multiple currencies. This enabled the company to launch in other countries.  
 * Main skills used: Java (J2EE), Ruby on Rails.
 
-### ECsoft UK Ltd/Ciber UK Ltd, London, UK — *Consultant*
+### ECsoft UK Ltd/Ciber UK Ltd, London, UK - *Consultant*
 
 September 1997 - February 2006
 
@@ -66,7 +66,7 @@ Full-stack software engineer for a wide variety of clients for an IT consultancy
 
 ## Education
 
-### University of Cambridge, Cambridge, UK — *BA, Maths and Computer Science*
+### University of Cambridge, Cambridge, UK - *BA, Maths and Computer Science*
 
 1994 - 1997
 
@@ -78,5 +78,4 @@ Full-stack software engineer for a wide variety of clients for an IT consultancy
 
 ## Links
 
-* [LinkedIn Profile](https://www.linkedin.com/in/edwardharman/)
-* [Personal GitHub](https://github.com/edward3h)
+[LinkedIn Profile](https://www.linkedin.com/in/edwardharman/) | [Personal GitHub](https://github.com/edward3h)
