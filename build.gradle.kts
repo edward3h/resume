@@ -38,7 +38,7 @@ var concatFiles = tasks.register<ConcatFilesTask>("concat") {
 var docx = tasks.register<Exec>("docx") {
     inputs.file(concatFiles.get().target)
     outputs.file(layout.buildDirectory.file("docs/Edward_Harman_Resume.docx"))
-    commandLine = listOf("docker", "run", "--rm",
+    commandLine = listOf("docker", "run", "--rm", "--user", "1000:1000",
         "--volume", layout.projectDirectory.asFile.absolutePath + ":/data", "pandoc/core:latest",
         "--shift-heading-level-by=-1",
         "-o", outputs.files.singleFile.relativeTo(layout.projectDirectory.asFile).toString(),
