@@ -1,5 +1,3 @@
-# Edward Harman
-
 ---
 
 **End-To-End Software Delivery | Reducing Development Friction | Mentoring Developers**
@@ -72,7 +70,7 @@ Full-stack software engineer for a wide variety of clients for an IT consultancy
 
 ## Open Source
 
-* A maintainer of JTE (Java Template Engine).
+* A contributor and maintainer of [jte: Java Template Engine](https://jte.gg/).
 
 ---
 

@@ -1,4 +1,5 @@
 import local.ConcatFilesTask
+import local.HtmlToDocx
 import local.MarkdownTask
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
@@ -26,7 +27,7 @@ var datestamp = tasks.register("datestamp") {
 
 var concatFiles = tasks.register<ConcatFilesTask>("concat") {
     dependsOn(datestamp)
-    target = layout.buildDirectory.file("pages/index.html")
+    target = layout.buildDirectory.file("pages/resume.html")
     outputs.file(target)
     sources.from("src/html/header.html",
         markdown.get().into.file("resume.html"),
@@ -35,12 +36,27 @@ var concatFiles = tasks.register<ConcatFilesTask>("concat") {
         "src/html/footer.html")
 }
 
-var docx = tasks.register<Exec>("docx") {
-    inputs.file(concatFiles.get().target)
-    outputs.file(layout.buildDirectory.file("docs/Edward_Harman_Resume.docx"))
-    commandLine = listOf("docker", "run", "--rm", "--user", "1000:1000",
-        "--volume", layout.projectDirectory.asFile.absolutePath + ":/data", "pandoc/core:latest",
-        "--shift-heading-level-by=-1",
-        "-o", outputs.files.singleFile.relativeTo(layout.projectDirectory.asFile).toString(),
-        inputs.files.singleFile.relativeTo(layout.projectDirectory.asFile).toString())
+var docx = tasks.register<HtmlToDocx>("docx") {
+    source = concatFiles.get().target
+    target = layout.buildDirectory.file("docs/Edward_Harman_Resume.docx")
+}
+
+var concatFiles2 = tasks.register<ConcatFilesTask>("concat2") {
+    dependsOn(datestamp)
+    target = layout.buildDirectory.file("pages/index.html")
+    outputs.file(target)
+    sources.from("src/html/header.html",
+        markdown.get().into.file("resume2.html"),
+        if (project.hasProperty("includeContact")) markdown.get().into.file("contact.html") else null,
+        datestamp.get().outputs.files.singleFile,
+        "src/html/footer.html")
+}
+
+var docx2 = tasks.register<HtmlToDocx>("docx2") {
+    source = concatFiles.get().target
+    target = layout.buildDirectory.file("docs/Edward_Harman_Resume_v2.docx")
+}
+
+tasks.register("pages") {
+    dependsOn(concatFiles2)
 }
