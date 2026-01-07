@@ -1,8 +1,48 @@
-# Edward Harman
+---
+lang: en
+title: Edward Harman
+subtitle: Metro Boston, MA
+mainfont: Aptos, Calibri, Arial, sans-serif
+maxwidth: 50rem
+backgroundcolor: lightgrey
+linkcolor: rgb(0, 0, 238)
+header-includes: |
+  <style>
+  .subtitle {
+    font-weight: bold;
+  }
+  header {
+    margin-bottom: 1em;
+  }
+  body {
+    background-color: white;
+    hyphens: none;
+    text-align: justify;
+  }
+  h2, h4 {
+    text-align: center;
+  }
+  table {
+    display: table;
+  }
+  .spread {
+    display: flex;
+    justify-content: space-between;
+  }
+  .spread div {
+  }
+  </style>
+...
 
 ---
 
-**End-To-End Software Delivery | Reducing Development Friction | Mentoring Developers**
+:::{.if FORMAT=docx}
+edward@ethelred.org`<w:r><w:tab/></w:r>`{=openxml}+1 (617) 938-7189`<w:r><w:tab/></w:r>`{=openxml}www.linkedin.com/in/edwardharman
+:::
+
+## Principal Software Engineer
+
+#### End-To-End Software Delivery | Reducing Development Friction | Mentoring Developers
 
 Expertise across the software stack: front-end, back-end, microservices, back-office.
 Focus on build tools, automated testing, continuous integration.
@@ -11,15 +51,19 @@ Insatiable appetite for learning and sharing new technology.
 
 ## Technical Skills
 
-Java, Gradle, SQL, Bash, Linux, Javascript/Typescript, Docker, Spring Boot, Micronaut, Groovy, Ruby, Rails, React, Svelte, AWS, OpenRewrite, XML/XSLT, Gitlab CI, GitHub workflows
+---------------- --------------------------------------------------------
+**Languages**    Java, SQL, Bash, Javascript, Typescript, Groovy, Ruby
 
-## Experience
+**Frameworks**   Spring Boot, Micronaut, Rails, React, Svelte
 
-### Tripadvisor, Needham, MA
+**Build tools**  Gradle, Gitlab CI, GitHub Actions, AWS CDK, OpenRewrite
 
-#### *Principal Software Engineer*
+**Platforms**    Linux, Docker, AWS, Postgres
+---------------- --------------------------------------------------------
 
-March 2008 - November 2025
+## Professional Experience
+
+### `<div class="spread"><div>`{=html}Tripadvisor, Needham, MA - *Principal Software Engineer* `<w:r><w:tab/><w:tab/></w:r>`{=openxml}`</div><div>`{=html}2008 - 2025`</div></div>`{=html}
 
 Full-stack engineer for a popular travel website. Many contributions over a long tenure.
 
@@ -43,30 +87,23 @@ Full-stack engineer for a popular travel website. Many contributions over a long
   * Participated in cross-team design reviews to evaluate architecture decisions, surface risks, and define success metrics.
   * Coordinated a legacy data migration that impacted 20+ services across 5+ teams.
 
+## Additional Experience
+
 ### Virtue Fusion Ltd, London, UK - *Java Developer*
 
-February 2006 - March 2008
-
-Backend service engineer for a games website.
-
-### ECsoft UK Ltd/Ciber UK Ltd, London, UK - *Consultant*
-
-September 1997 - February 2006
-
-Full-stack software engineer for a wide variety of clients for an IT consultancy.
+### Ciber UK Ltd, London, UK - *Consultant*
 
 ## Education
 
-### University of Cambridge, Cambridge, UK - *BA, Maths and Computer Science*
-
-1994 - 1997
+**Bachelor of Arts (BA)**, *Maths and Computer Science*\
+University of Cambridge, Cambridge, UK
 
 ## Open Source
 
-* A contributor and maintainer of [jte: Java Template Engine](https://jte.gg/).
-
----
+A contributor and maintainer of [jte: Java Template Engine](https://jte.gg/).
 
 ## Links
 
 [LinkedIn Profile](https://www.linkedin.com/in/edwardharman/) | [Personal GitHub](https://github.com/edward3h)
+
+*Updated {{FORMATTED_DATE}}*

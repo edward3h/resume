@@ -1,6 +1,4 @@
-import local.ConcatFilesTask
-import local.HtmlToDocx
-import local.MarkdownTask
+import local.PandocConvert
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.time.format.FormatStyle
@@ -9,54 +7,23 @@ plugins {
     base
 }
 
-var markdown = tasks.register<MarkdownTask>("markdown") {
-	from = file("src/markdown")
-}
+val formattedDate = DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG).format(LocalDate.now())
 
-var datestamp = tasks.register("datestamp") {
-    outputs.file(layout.buildDirectory.file("datestamp.html"))
-    doLast {
-        var date = LocalDate.now()
-        var formatted = DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG).format(date)
-        outputs.files.singleFile.writeText("""
-            <hr>
-            <p><em>Last updated <time>$formatted</time></em</p>
-        """.trimIndent())
-    }
-}
-
-var concatFiles = tasks.register<ConcatFilesTask>("concat") {
-    dependsOn(datestamp)
-    target = layout.buildDirectory.file("pages/resume.html")
-    outputs.file(target)
-    sources.from("src/html/header.html",
-        markdown.get().into.file("resume.html"),
-        if (project.hasProperty("includeContact")) markdown.get().into.file("contact.html") else null,
-        datestamp.get().outputs.files.singleFile,
-        "src/html/footer.html")
-}
-
-var docx = tasks.register<HtmlToDocx>("docx") {
-    source = concatFiles.get().target
-    target = layout.buildDirectory.file("docs/Edward_Harman_Resume.docx")
-}
-
-var concatFiles2 = tasks.register<ConcatFilesTask>("concat2") {
-    dependsOn(datestamp)
+var html = tasks.register<PandocConvert>("html") {
+    source = file("src/markdown/resume2.md")
     target = layout.buildDirectory.file("pages/index.html")
-    outputs.file(target)
-    sources.from("src/html/header.html",
-        markdown.get().into.file("resume2.html"),
-        if (project.hasProperty("includeContact")) markdown.get().into.file("contact.html") else null,
-        datestamp.get().outputs.files.singleFile,
-        "src/html/footer.html")
-}
-
-var docx2 = tasks.register<HtmlToDocx>("docx2") {
-    source = concatFiles.get().target
-    target = layout.buildDirectory.file("docs/Edward_Harman_Resume_v2.docx")
+    argFiles.add(PandocConvert.ArgFile("lua-filter", file("src/templates/panda.lua")))
+    environment.put("FORMATTED_DATE", formattedDate)
 }
 
 tasks.register("pages") {
-    dependsOn(concatFiles2)
+    dependsOn(html)
+}
+
+var docx = tasks.register<PandocConvert>("docx") {
+    source = file("src/markdown/resume2.md")
+    target = layout.buildDirectory.file("docs/Edward_Harman_Resume.docx")
+    argFiles.add(PandocConvert.ArgFile("reference-doc", file("src/templates/word-styles2.docx")))
+    argFiles.add(PandocConvert.ArgFile("lua-filter", file("src/templates/panda.lua")))
+    environment.put("FORMATTED_DATE", formattedDate)
 }
