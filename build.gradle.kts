@@ -13,6 +13,7 @@ var html = tasks.register<PandocConvert>("html") {
     source = file("src/markdown/resume2.md")
     target = layout.buildDirectory.file("pages/index.html")
     argFiles.add(PandocConvert.ArgFile("lua-filter", file("src/templates/panda.lua")))
+    argFiles.add(PandocConvert.ArgFile("lua-filter", file("src/templates/list-table.lua")))
     environment.put("FORMATTED_DATE", formattedDate)
 }
 
@@ -25,5 +26,6 @@ var docx = tasks.register<PandocConvert>("docx") {
     target = layout.buildDirectory.file("docs/Edward_Harman_Resume.docx")
     argFiles.add(PandocConvert.ArgFile("reference-doc", file("src/templates/word-styles2.docx")))
     argFiles.add(PandocConvert.ArgFile("lua-filter", file("src/templates/panda.lua")))
+    argFiles.add(PandocConvert.ArgFile("lua-filter", file("src/templates/list-table.lua")))
     environment.put("FORMATTED_DATE", formattedDate)
 }

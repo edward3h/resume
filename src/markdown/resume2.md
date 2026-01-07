@@ -19,11 +19,16 @@ header-includes: |
     hyphens: none;
     text-align: justify;
   }
-  h2, h4 {
+  h2 {
+    color: #0F4761;
+  }
+  h2, h4, .center {
     text-align: center;
   }
   table {
     display: table;
+    margin: 1em auto;
+    max-width: 75%;
   }
   .spread {
     display: flex;
@@ -31,13 +36,22 @@ header-includes: |
   }
   .spread div {
   }
+  th, tbody {
+    border: 0;
+  }
   </style>
 ...
 
 ---
 
 :::{.if FORMAT=docx}
-edward@ethelred.org`<w:r><w:tab/></w:r>`{=openxml}+1 (617) 938-7189`<w:r><w:tab/></w:r>`{=openxml}www.linkedin.com/in/edwardharman
+edward@ethelred.org`<w:r><w:tab/></w:r>`{=openxml}[linkedin.com/in/edwardharman](https://www.linkedin.com/in/edwardharman/)`<w:r><w:tab/></w:r>`{=openxml}[github.com/edward3h](https://github.com/edward3h)
+:::
+
+:::{.if FORMAT=html}
+:::center
+[linkedin.com/in/edwardharman](https://www.linkedin.com/in/edwardharman/) | [github.com/edward3h](https://github.com/edward3h)
+:::
 :::
 
 ## Principal Software Engineer
@@ -50,17 +64,30 @@ Teach best practice by example, with code reviews and presentations.
 Advocate for informed decisions.
 Insatiable appetite for learning and sharing new technology.
 
+:::{.list-table header-rows=0 widths=1,1}
+* * * Web application development
+    * High-scale concurrent services
+    * Java expert
+  * * Automated testing
+    * Continuous Integration
+    * Programming mentor
+:::
+
 ## Technical Skills
 
----------------- --------------------------------------------------------
-**Languages**    Java, SQL, Bash, Javascript, Typescript, Groovy, Ruby
+:::{.list-table widths=1,4 header-rows=0 header-cols=1 aligns=l,l}
+* - Languages
+  - Java, SQL, Bash, Javascript, Typescript, Groovy, Ruby
 
-**Frameworks**   Spring Boot, Micronaut, Rails, React, Svelte
+* - Frameworks
+  - Spring Boot, Micronaut, Rails, React, Svelte
 
-**Build tools**  Gradle, Gitlab CI, GitHub Actions, AWS CDK, OpenRewrite
+* - Build tools
+  - Gradle, Gitlab CI, GitHub Actions, AWS CDK, OpenRewrite
 
-**Platforms**    Linux, Docker, AWS, Postgres
----------------- --------------------------------------------------------
+* - Platforms
+  - Linux, Docker, AWS, Postgres
+:::
 
 ## Professional Experience
 
@@ -102,9 +129,5 @@ University of Cambridge, Cambridge, UK
 ## Open Source
 
 A contributor and maintainer of [jte: Java Template Engine](https://jte.gg/).
-
-## Links
-
-[LinkedIn Profile](https://www.linkedin.com/in/edwardharman/) | [Personal GitHub](https://github.com/edward3h)
 
 *Updated {{FORMATTED_DATE}}*
