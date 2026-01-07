@@ -47,6 +47,7 @@ edward@ethelred.org`<w:r><w:tab/></w:r>`{=openxml}+1 (617) 938-7189`<w:r><w:tab/
 Expertise across the software stack: front-end, back-end, microservices, back-office.
 Focus on build tools, automated testing, continuous integration.
 Teach best practice by example, with code reviews and presentations.
+Advocate for informed decisions.
 Insatiable appetite for learning and sharing new technology.
 
 ## Technical Skills
