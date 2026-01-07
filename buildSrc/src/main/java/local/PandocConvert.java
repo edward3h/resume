@@ -14,8 +14,10 @@ import org.gradle.process.ExecOperations;
 import org.gradle.process.ExecSpec;
 
 import javax.inject.Inject;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.Serializable;
+import java.nio.charset.StandardCharsets;
 
 public abstract class PandocConvert extends DefaultTask {
     private final ExecOperations execOperations;
@@ -50,8 +52,10 @@ public abstract class PandocConvert extends DefaultTask {
     }
 
     private void runWithSpec(ExecSpec spec) {
+        var user = runCommand("id", "-u");
+        var group = runCommand("id", "-g");
         spec.commandLine(
-                "docker", "run", "--rm", "--user", "1000:1000",
+                "docker", "run", "--rm", "--user", "%s:%s".formatted(user.strip(), group.strip()),
                 "--volume", projectDirectory.getAbsolutePath() + ":/data"
                 );
         getEnvironment().get().forEach((key,value) -> spec.args("--env", "%s=%s".formatted(key, value)));
@@ -63,5 +67,14 @@ public abstract class PandocConvert extends DefaultTask {
         getArgFiles().get().forEach(argFile -> {
             spec.args("--" + argFile.arg, fileOperations.relativePath(argFile.file));
         });
+    }
+
+    private String runCommand(Object... commandLine) {
+        var output = new ByteArrayOutputStream();
+        var result = execOperations.exec(spec -> {
+            spec.setStandardOutput(output);
+            spec.commandLine(commandLine);
+        });
+        return output.toString(StandardCharsets.UTF_8);
     }
 }
