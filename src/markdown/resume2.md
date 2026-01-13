@@ -81,6 +81,9 @@ header-includes: |
   h1,h2,h3,h4,h5,h6 {
   page-break-after: avoid;
   }
+  ul {
+  page-break-inside: avoid;
+  }
   #buttons {
   display:none;
   }
