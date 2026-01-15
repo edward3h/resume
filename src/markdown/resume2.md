@@ -32,13 +32,7 @@ header-includes: |
   table {
     display: table;
     margin: 1em auto;
-    max-width: 75%;
-  }
-  .spread {
-    display: flex;
-    justify-content: space-between;
-  }
-  .spread div {
+    width: auto;
   }
   th, tbody {
     border: 0;
@@ -69,9 +63,6 @@ header-includes: |
   @media print {
       html {
         background-color: white;
-      }
-      table {
-        max-width: 90%;
       }
         body {
   font-size:0.85em;
@@ -109,7 +100,7 @@ edward@ethelred.org`<w:r><w:tab/></w:r>`{=openxml}[linkedin.com/in/edwardharman]
 
 :::{.if FORMAT=html}
 :::center
-[edward@ethelred.org](edward+resume@ethelred.org) |
+[edward@ethelred.org](mailto:edward+resume@ethelred.org) |
 [linkedin.com/in/edwardharman](https://www.linkedin.com/in/edwardharman/) |
 [github.com/edward3h](https://github.com/edward3h)
 :::
@@ -117,21 +108,25 @@ edward@ethelred.org`<w:r><w:tab/></w:r>`{=openxml}[linkedin.com/in/edwardharman]
 
 ## Principal Software Engineer
 
-#### End-To-End Software Delivery | Reducing Development Friction | Mentoring Developers
+#### Delivering innovative software through best practices, automation, & mentorship.
 
-Expertise across the software stack: front-end, back-end, microservices, back-office.
-Focus on build tools, automated testing, continuous integration.
-Teach best practice by example, with code reviews and presentations.
-Advocate for informed decisions.
-Insatiable appetite for learning and sharing new technology.
+Accomplished Software Engineer with deep expertise across the full software stack, specializing in building maintainable, reliable applications.
+Dedicated to reducing development friction through automation, robust testing, and continuous integration, ensuring seamless delivery pipelines.
+Excited about mentoring developers, fostering best practices, and advocating for informed technical decision-making to elevate team capabilities.
+Committed to continuous learning and sharing emerging technologies to drive innovation and operational excellence.
 
-:::{.list-table header-rows=0 widths=1,1}
-* * * Web application development
-    * High-scale concurrent services
-    * Java expert
-  * * Automated testing
-    * Continuous Integration
-    * Programming mentor
+:::{.list-table header-rows=0 widths=1,1,1}
+* * Web application development
+  * High-scale concurrent services
+  * Java expert
+  
+* * Build Tools & Automated testing
+  * Continuous Integration
+  * Microservices Architecture
+
+* * Code Reviews & Mentorship
+  * Cloud-native Development
+  * Infrastructure As Code
 :::
 
 ## Technical Skills
@@ -154,34 +149,37 @@ Insatiable appetite for learning and sharing new technology.
 
 ### Tripadvisor, Needham, MA
 
-##### *Principal Software Engineer* - March 2025 - November 2025
-##### *Senior Software Engineer* - March 2008 - March 2025
+##### *Principal Software Engineer* 2025
+##### *Senior Software Engineer* 2008 - 2025
 
 Full-stack engineer for a popular travel website. Many contributions over a long tenure.
 
 ###### Build Tooling & Developer Productivity
+
 * Designed and maintained Gradle build pipelines that fully codified project setup, eliminating manual steps and reducing onboarding errors.
 * Built custom Gradle plugins to enforce company-wide code style, dependency standards, and build conventions, improving consistency and reducing low-value code review feedback.
-* Developed internal test and build tools that reduced iteration time on the team’s primary service by several minutes per cycle, significantly improving developer feedback loops.
+* Developed internal test and build tools that reduced iteration time on the team’s primary service by several minutes per cycle, significantly improving feedback loops.
 
 ###### Technical Leadership & Knowledge Sharing
-* Led technical book groups (e.g., Effective Java), contextualizing best practices for company systems and constraints.
-* Delivered internal presentations on external technologies and in-house tooling.
-* Conducted thorough code reviews emphasizing education, maintainability, and long-term system health. 
+
+* Steered technical book groups (e.g. Effective Java), contextualizing best practices for company systems and constraints.
+* Delivered internal presentations on external technologies and in-house tooling, to share knowledge.
+* Conducted thorough code reviews emphasizing education, maintainability, and long-term system health.
 
 ###### Cloud & Platform Engineering
+
 * Migrated legacy back-office jobs to AWS, improving scalability and operational reliability. AWS CDK Pipeline, Docker, AWS Batch.
 * Contributed to cross-team planning and execution of microservice migrations to AWS, identifying risks, dependencies, and success metrics. Spring Boot on AWS ECS.
 * Refactored legacy systems incrementally to modern architectures without service disruption.
 
 ###### High-Scale Backend Systems
-* Developed and maintained a highly concurrent hotel meta-search service processing over 1B rate requests per day to external partners.
-* Focused on performance, reliability, and observability in production systems.
+
+* Developed and maintained a highly concurrent hotel meta-search service processing over 1B rate requests per day.
 
 ###### Product & Cross-Team Collaboration
-* Built internal tools used by account managers to support partner operations.
-* Participated in cross-team design reviews to evaluate architecture decisions, surface risks, and define success metrics.
-* Coordinated a legacy data migration that impacted 20+ services across 5+ teams.
+
+* Unblocked maintainability of a widely used internal application, by migrating from Rails to a modern microservice platform with React frontend.
+* Planned and led a company-wide project migrating the source-of-truth for foreign exchange rates to a new database and AWS service, guiding and assisting dozens of teams.
 
 ## Additional Experience
 
