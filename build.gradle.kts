@@ -14,7 +14,8 @@ var html = tasks.register<PandocConvert>("html") {
     source = file("src/markdown/resume2.md")
     target = layout.buildDirectory.file("pages/index.html")
     argFiles.add(PandocConvert.ArgFile("lua-filter", file("src/templates/panda.lua")))
-    argFiles.add(PandocConvert.ArgFile("lua-filter", file("src/templates/list-table.lua")))
+    argFiles.add(PandocConvert.ArgFile("lua-filter", file("src/templates/list-table.lua")))    
+    argFiles.add(PandocConvert.ArgFile("lua-filter", file("src/templates/piped-list.lua")))
     environment.put("FORMATTED_DATE", formattedDate)
 }
 
@@ -28,7 +29,14 @@ var docx = tasks.register<PandocConvert>("docx") {
     argFiles.add(PandocConvert.ArgFile("reference-doc", file("src/templates/word-styles2.docx")))
     argFiles.add(PandocConvert.ArgFile("lua-filter", file("src/templates/panda.lua")))
     argFiles.add(PandocConvert.ArgFile("lua-filter", file("src/templates/list-table.lua")))
+    argFiles.add(PandocConvert.ArgFile("lua-filter", file("src/templates/piped-list.lua")))
     environment.put("FORMATTED_DATE", formattedDate)
+}
+
+var testPipedList = tasks.register<PandocConvert>("testPipedList") {
+    source = file("src/markdown/piped-list-test.md")
+    target = layout.buildDirectory.file("test/piped.docx")
+    argFiles.add(PandocConvert.ArgFile("lua-filter", file("src/templates/piped-list.lua")))
 }
 
 var pdf = tasks.register<HtmlToPdf>("pdf") {

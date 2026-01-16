@@ -52,13 +52,28 @@ header-includes: |
   margin-right: 0.5rem;
   }
   h5 {
-  margin: 0.8em 0;
+  margin: 0.2em 0;
   font-style: normal;
+  }
+  h5 em {
+    display: inline-block;
+    width: 220px;
   }
   h6 {
   margin: 0.2em 0 0;
   font-style: normal;
   font-weight: bold;
+  }
+  ul {
+  margin-top: 0.5em;
+  padding-left: 1.3em;
+  }
+  .piped-list {
+    text-align: center;
+    font-weight: bold;
+  }
+  .piped-list p {
+    margin: 0.2em 0;
   }
   @media print {
       html {
@@ -115,18 +130,18 @@ Dedicated to reducing development friction through automation, robust testing, a
 Excited about mentoring developers, fostering best practices, and advocating for informed technical decision-making to elevate team capabilities.
 Committed to continuous learning and sharing emerging technologies to drive innovation and operational excellence.
 
-:::{.list-table header-rows=0 widths=1,1,1}
-* * Web application development
-  * High-scale concurrent services
-  * Java expert
-  
-* * Build Tools & Automated testing
-  * Continuous Integration
-  * Microservices Architecture
+:::{.piped-list}
+* Web application development
+* High-scale concurrent services
+* Java expert
 
-* * Code Reviews & Mentorship
-  * Cloud-native Development
-  * Infrastructure As Code
+* Build Tools & Automated testing
+* Continuous Integration
+* Microservices Architecture
+
+* Code Reviews & Mentorship
+* Cloud-native Development
+* Infrastructure As Code
 :::
 
 ## Technical Skills
@@ -149,8 +164,8 @@ Committed to continuous learning and sharing emerging technologies to drive inno
 
 ### Tripadvisor, Needham, MA
 
-##### *Principal Software Engineer* 2025
-##### *Senior Software Engineer* 2008 - 2025
+##### *Principal Software Engineer*`<w:r><w:tab/></w:r>`{=openxml} [2025]{.right}
+##### *Senior Software Engineer*`<w:r><w:tab/></w:r>`{=openxml} [2008 - 2025]{.right}
 
 Full-stack engineer for a popular travel website. Many contributions over a long tenure.
 
