@@ -162,6 +162,10 @@ Committed to continuous learning and sharing emerging technologies to drive inno
 
 ## Professional Experience
 
+### Taxwell (Remote)
+
+##### *Principal Software Engineer*`<w:r><w:tab/></w:r>`{=openxml} [2026 - current]{.right}
+
 ### Tripadvisor, Needham, MA
 
 ##### *Principal Software Engineer*`<w:r><w:tab/></w:r>`{=openxml} [2025]{.right}
